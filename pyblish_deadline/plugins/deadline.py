@@ -166,6 +166,7 @@ class IntegrateDeadline(pyblish.api.ContextPlugin):
 
             # submitting
             try:
+                os.environ["DEADLINE_PATH"] = r"C:\Program Files\Thinkbox\Deadline7\bin"
                 result = self.CallDeadlineCommand(args)
 
                 self.log.info(result)
